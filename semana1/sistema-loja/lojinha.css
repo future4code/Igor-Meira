@@ -1,5 +1,6 @@
 
-h1 {color: midnightblue;
+h1 {
+    color: midnightblue;
     text-align: center;
 }
 
@@ -7,28 +8,46 @@ h2 {color:midnightblue;}
 
 h3 {color:midnightblue;}
 
-body {background-color: rgb(18, 218, 11);}
+body {background-color: rgb(18, 218, 11);
+text-align:center;}
 
 div {background-color: sandybrown;}
 
-footer {position: absolute;
-        bottom:0;
-        width: 100;
-        text-align: center;
+footer {position:absolute;
+    bottom:0; 
+    width:100%;
+    margin-top: 10px;
     }
 
 .tabela {
-
     background-color: sandybrown;
-    
+    border: 1px solid; color: darkgreen;
+    border-collapse: collapse;
+    text-align: center;
+    margin: auto;
 }
 
-td {
+td, tr, th {
     text-align:center; 
     vertical-align:middle;
+    border: 1px solid; color: darkgreen; 
+    border-collapse: collapse;
 }
 
-#logos{
-
-    margin: 200px;
+#logos {
+margin: auto;
 }
+
+a:hover{
+    color: darkgray;
+}
+
+legend {
+    font-weight: bolder;
+
+}
+
+label{
+    cursor: pointer;
+}
+
