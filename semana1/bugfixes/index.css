@@ -111,6 +111,7 @@ table {
     width: 60%;
     list-style-position: inside;
     text-align: center;
+    margin: auto;
 }
 
 td button {
