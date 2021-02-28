@@ -33,13 +33,11 @@ if (partida) {
 
       while(sortear) {
 
-         if (jogadorCarta1 == "A" && jogadorCarta2 == "A")
+         if (jogadorCarta1 == "A" && jogadorCarta2 == "A") 
          console.log('Jogador cartas: ' + jogadorCarta1.texto + jogadorCarta2.texto, 'pontos', +  placarJogador)
          console.log('Computador cartas: ' + computadorCarta1.texto + computadorCarta2.texto, 'pontos', +  placarComputador)
 
-         } if (computadorCarta1 == "A" && computadorCarta2 == "A") 
-         console.log('Jogador cartas: ' + jogadorCarta1.texto + jogadorCarta2.texto, 'pontos', +  placarJogador)
-         console.log('Computador cartas: ' + computadorCarta1.texto + computadorCarta2.texto, 'pontos', +  placarComputador)
+         
 
 
 
