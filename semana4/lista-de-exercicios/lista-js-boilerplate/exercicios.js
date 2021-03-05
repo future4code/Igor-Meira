@@ -7,23 +7,30 @@ function inverteArray(array) {
 
 //Exercício 2
 
-function retornaNumerosParesElevadosADois (array) {
+function retornaNumerosParesElevadosADois(array){
    // implemente sua lógica aqui
    let novoArray = [];
-      for(let i = 0; i < array.length; i++) {
-         if(array[i] % 2 === 0) {
+      for(let i = 0; i < array.length; i++){
+         if(array[i] % 2 === 0){
             novoArray.push(array[i] * array[i])
       }
    }
       return novoArray
-      
 }
 
 //Exercício 3
 
 function retornaNumerosPares (array) {
    // implemente sua lógica aqui
+   novoArray = []
+   for(let i = 0; i < array.length; i++){
+      if(array[i] % 2 === 0){
+      novoArray.push(array[i])
+   }
 }
+return novoArray
+}
+
 
 //Exercício 4
 
