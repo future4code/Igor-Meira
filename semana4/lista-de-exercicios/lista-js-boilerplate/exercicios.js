@@ -22,7 +22,7 @@ function retornaNumerosParesElevadosADois(array){
 
 function retornaNumerosPares (array) {
    // implemente sua lógica aqui
-   novoArray = []
+   let novoArray = []
    for(let i = 0; i < array.length; i++){
       if(array[i] % 2 === 0){
       novoArray.push(array[i])
@@ -31,11 +31,17 @@ function retornaNumerosPares (array) {
 return novoArray
 }
 
-
 //Exercício 4
 
 function retornaMaiorNumero(array) {
    // implemente sua lógica aqui
+   let maiorNumero = []
+   for(let i =0; i < array.length; i++){
+      if(maiorNumero < array[i]){
+         maiorNumero = array[i]
+      }
+   }
+return maiorNumero
 }
 
 //Exercício 5
