@@ -48,12 +48,13 @@ return maiorNumero
 
 function retornaQuantidadeElementos (array) {
    // implemente sua lógica aqui
+   return array.length
 }
 
 //Exercício 6
 
 function retornaExpressoesBooleanas() {
-   // implemente sua lógica aqui
+   // implemente sua lógica aqui    
 }
 
 //Exercício 7
