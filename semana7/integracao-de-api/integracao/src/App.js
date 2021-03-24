@@ -1,25 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import CreateUserPage from './components/CreateUserPage';
+import UsersListPage from './components/UsersListPage';
+import React from "react"
 
-function App() {
+export default class App extends React.Component {
+  state = {
+    page: 'createUser'
+  }
+
+  changePage = () => {
+    if (this.state.page === 'createUser') {
+      this.setState({page: 'usersList'})
+      
+    } else if ( this.state.page === 'usersList') {
+      this.setState({page: 'createUser'})
+    }
+  }
+
+  renderPage = () => {
+    switch (this.state.page) {
+      case 'createUser':
+        return <CreateUserPage/>
+      case 'usersList':
+        return <UsersListPage/>
+      default:
+        return <div></div>
+    }
+  }
+
+  render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <h1>Labensers</h1>
+          <button onClick={this.changePage}>Trocar de Página</button>
+           {this.renderPage()}
+     </div>
   );
 }
 
-export default App;
+}
