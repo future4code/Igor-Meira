@@ -23,17 +23,25 @@ export default class CreateUserPage extends React.Component {
         }
 
         axios.post(baseUrl, body, axiosConfig)
-
+            .then((res) => {
+                //console.log(res)
+            alert('O usuário foi criado com sucesso!')
+                this.setState({name: ' ', email: ' '})
+            }).catch((err) => {
+            alert('Não foi possível cadastrar o usuário.')
+                //console.log(err)
+            })
     }
-    
-
+ 
     render() {
         return (
             <div>
                 <h2>Criar Usuário</h2>
-                    <input onChange={this.handleName} value={this.state.name} placeholder='Nome'/>
-                    <input onChange={this.handleEmail} value={this.state.email} placeholder='E-mail'/>
-                <button onClink={this.createUser}>Criar</button>
+                    <input onChange={this.handleName} value={this.state.name}
+                    placeholder= "Nome"/>
+                    <input onChange={this.handleEmail} value={this.state.email} 
+                    placeholder= "E-mail"/>
+                <button onClick={this.createUser}>Criar</button>
             </div>
         )   
     }   
