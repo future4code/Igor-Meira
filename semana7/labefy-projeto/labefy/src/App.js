@@ -1,8 +1,9 @@
 import React from "react";
 import CriaPlaylist from "./CriaPlaylist"
 import ListaDeMusicas from "./ListaDeMusicas"
+import styled from "styled-components"
 
-export default class App extends React.Components {
+export default class App extends React.Component {
     state = {
         page: 'criaPlaylist'
     }
@@ -25,6 +26,10 @@ export default class App extends React.Components {
                 return <div></div>
         }
     }
+
+    const App = styled.div`
+        color: blue;
+    `
 
     render () {
         return (
