@@ -1,7 +1,8 @@
 import React, { useState, useEffects } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
-import { AplicativoInicial } from './components/Aplicativo'
+import { AplicativoInicial } from './Pages/Aplicativo'
+import { TelaMatch } from './Pages/TelaDeMatch'
 
 const ContainerPrincipal = styled.div`
 display: flex;
@@ -15,19 +16,25 @@ width: 400px;
 height: 90vh;
 border-radius: 10px;
 border: solid 1px black;
-
 `
 
-const App = () => {
-  return (
+export default function App ()  {
 
-    <ContainerPrincipal>
+  const resetaBusca = () => {
+    axios.put('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/clear',)
 
-<AplicativoInicial />
-
-    </ContainerPrincipal>
-    
-  );
+    console.log('limpou')
+  }
+  
+    return (
+      <ContainerPrincipal>
+          <h1>AstroMatch</h1>
+            <AplicativoInicial />
+            <TelaMatch />
+            <button onClick={resetaBusca}>Resetar busca</button>
+      </ContainerPrincipal>
+      
+    );
 }
 
-export default App;
+
