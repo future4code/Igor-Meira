@@ -1,14 +1,15 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-const CreateTripPage = () => {
+const ErrorPage = () => {
     const history = useHistory ()
     return (
     <>
-    <p>criar viagem</p>
+    <p>Erro</p>
     <button onClick={history.goBack}>voltar</button>
+
     </>
     )
 }
 
-export default CreateTripPage
+export default ErrorPage
