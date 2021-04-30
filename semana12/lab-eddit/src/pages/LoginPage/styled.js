@@ -5,12 +5,17 @@ export const ScreenContainer = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100vw;
+    margin-top: 10vh;
 `
-export const InputsContainer = styled.input`
+export const InputsContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 80vw;
     max-width: 450px;
     align-items: center;
     margin-bottom: 20px;
+`
+export const SignUpButton = styled.div`
+    width: 80vw;
+    max-width: 450px;
 `

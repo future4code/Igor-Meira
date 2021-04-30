@@ -16,7 +16,7 @@ const Router = () => {
                     <LoginPage/>
                 </Route>
 
-                <Route exact path='cadastro'>
+                <Route exact path='/cadastro'>
                     <SignUpPage/>
                 </Route>
 
