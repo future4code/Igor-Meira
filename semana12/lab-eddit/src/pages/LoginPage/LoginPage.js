@@ -4,16 +4,19 @@ import TextField from '@material-ui/core/TextField'
 import useForm from '../../hooks/useForm'
 import Button from '@material-ui/core/Button'
 import { useHistory } from 'react-router-dom'
-import { goToSignUp } from '../../routes/coordinator'
+import { goToSignUp, goToFeed } from '../../routes/coordinator'
 import { login } from '../../services/user'
+//import useUnprotectedPage from '../../hooks/useUnprotectedPage'
 
 const LoginPage = () => {
+  //useUnprotectedPage()
   const history = useHistory()
   const [form, onChange, clear] = useForm({email: '', password: ''})
 
   const onSubmitForm = (event) => {
       event.preventDefault()
       login(form, clear, history)
+      goToFeed(history)
   }
 
   return (

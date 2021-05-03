@@ -3,11 +3,18 @@ import { ScreenContainer, InputsContainer } from './styled'
 import TextField from '@material-ui/core/TextField'
 import useForm from '../../hooks/useForm'
 import Button from '@material-ui/core/Button'
+import { useHistory } from 'react-router-dom'
+import { goToFeed } from '../../routes/coordinator'
+//import useUnprotectedPage from '../../hooks/useUnprotectedPage'
+import { signUp } from '../../services/user'
 
 const SignUpPage = () => {
+  //useUnprotectedPage()
+  const history = useHistory()
   const [form, onChange, clear] = useForm({name: '', email: '', password: ''})
   const onSubmitForm = (event) => {
       event.preventDefault()
+      signUp(form, clear, history)
   }
 
   return (
@@ -53,6 +60,7 @@ const SignUpPage = () => {
             />
 
             <Button
+                onClick={() => goToFeed(history)}
                 type={'submit'}
                 fullWidth
                 variant={'contained'}

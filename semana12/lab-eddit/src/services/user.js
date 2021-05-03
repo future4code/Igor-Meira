@@ -12,3 +12,13 @@ export const login = (body, clear, history) => {
     })
     .catch((err) =>alert('Erro de login'))
   }
+
+  export const signUp = (body, clear, history) => {
+    axios.post(`${BASE_URL}/signup`, body) 
+    .then((res) =>{
+      localStorage.setItem('token', res.data.token)
+      clear()
+      goToFeed(history)
+    })
+    .catch((err) =>alert('Erro de login'))
+  }
