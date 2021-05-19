@@ -1,5 +1,3 @@
-//console.log("hello, world!")
-
 //a) Não possível pois numeros não se encaixam como string, uma vez que o valor dela foi atribuído somente como string.
 
 const minhaString: string = "49"
