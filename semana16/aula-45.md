@@ -26,12 +26,12 @@ VALUES(
   "1963-08-23", 
   "female"
 );
-´´´
+```
 
 b. Código de erro: 1062. Entrada duplicada '002' para a chave 'PRIMARY' - Mostra que a chave primária está duplicada e por isso é impossível acrescentar o dado à tabela, pois cada item deve ter sua própria chave.
 
 c. Código de erro: 1136. A contagem de colunas não corresponde à contagem de valores na linha 1 - Este erro mostra que existem mais itens listados do que "parâmetros" a serem recebidos.
-´´´sql
+```sql
 INSERT INTO Actor (id, name, salary, birth_date, gender)
 VALUES(
   "003", 
@@ -40,10 +40,10 @@ VALUES(
   "1929-10-19", 
   "female"
 );
-´´´
+```
 
 d. Código de erro: 1364. O campo 'nome' não tem um valor padrão - Indica que o campo nome não pode ser nulo.
-´´´sql
+```sql
 INSERT INTO Actor (id, name, salary, birth_date, gender)
 VALUES(
   "004",
@@ -52,12 +52,12 @@ VALUES(
   "1949-04-18", 
   "male"
 );
-´´´
+```
 
 e. Código de erro: 1292. Valor de data incorreto: '1950' para a coluna 'birth_date' na linha 1 - O formato precisa ser YYYY/MM/DD
 
 f. 
-´´´sql
+```sql
 INSERT INTO Actor (id, name, salary, birth_date, gender)
 VALUES(
   "006", 
@@ -75,7 +75,8 @@ VALUES(
   "1975-11-28", 
   "female"
 );
-´´´
+```
+
 
 #### **Exercício 3**
 
@@ -85,7 +86,7 @@ b. SELECT name, salary from Actor WHERE id = "001";
 
 c. SELECT id, name from Actor WHERE gender = "invalid"; - Não retorna nenhum valor e nem ocorre um erro, pois não existe este valor na query de atores.
 
-d. SELECT id, name, salary from Actor WHERE salary <500000;
+d. SELECT id, name, salary from Actor WHERE salary < 500000;
 
 e. Código de erro: 1054. Coluna desconhecida 'nome' na 'lista de campos' - O certo seria escrever NAME, que é o valor correto da coluna.
 
@@ -120,7 +121,7 @@ rating TINYINT NOT NULL
 ```
 
 b. c. d. 
-
+```sql
 INSERT INTO Movie (id, title, synopsis, release_date, rating) 
 VALUES(
 	"001",
@@ -146,6 +147,30 @@ VALUES(
     "Cansado da humanidade, Deus resolve tirar férias para descansar e procura alguém no Brasil capaz de substituí-lo. O borracheiro e pescador Taoca e a solitária Madá deverão guiá-lo até Quincas das Mulas, candidato de Deus a santo.",
     "2003-01-31",
     9
-)
+);
+```
 
 
+#### **Exercício 6**
+
+a. SELECT id, title, rating FROM Movie WHERE id = "003";
+
+b. SELECT * FROM Movie WHERE title = "Deus é brasileiro";
+
+c. SELECT * FROM Movie WHERE rating >= 7;
+
+
+#### **Exercício 7**
+
+a. SELECT * FROM Movie WHERE title LIKE "%vida%";
+
+b. SELECT * FROM Movie WHERE title LIKE "%Deus%" OR synopsis LIKE "%uma%";
+
+c. SELECT * FROM Movie WHERE release_date < "2020-05-27";
+
+d.
+```sql
+SELECT * FROM Movie WHERE release_date < "2020-05-27" AND 
+      (title LIKE "%Deus%" OR
+      synopsis LIKE "%Deus%") AND rating > 7;
+```
